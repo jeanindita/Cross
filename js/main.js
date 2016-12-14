@@ -204,7 +204,7 @@
         markers: [{
             position: "center",
             info: "121 S Pinckney St",
-            showInfo: false
+            showInfo: true
         }]
     });
     
