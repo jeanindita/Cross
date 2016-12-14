@@ -1,4 +1,4 @@
-(function() {
+(function($) {
     "use strict";
     //preloader
     $(window).load(function() {
@@ -161,14 +161,16 @@
     });
 
     // Navigation icon / hamburger
-    $('#nav-icon').click(function() {
+    $('#nav-icon').on('click', function(e) {
         $(this).toggleClass('open');
         $("#menu-overlay").toggleClass("menu-show");
+        e.preventDefault();
     });
 
-    $('.smooth-scroll').click(function() {
+    $('.smooth-scroll').on('click', function(e) {
         $('#nav-icon').removeClass('open');
         $("#menu-overlay").removeClass("menu-show");
+        e.preventDefault();
     });
 
     // Reveal on scrool
@@ -202,8 +204,8 @@
         markers: [{
             position: "center",
             info: "121 S Pinckney St",
-            showInfo: !0
+            showInfo: false
         }]
-    })
-
-})();
+    });
+    
+})(jQuery);
